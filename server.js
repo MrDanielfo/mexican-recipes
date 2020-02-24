@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 const PORT = process.env.PORT || 4444;
 
-const cors = {
+const corsOptions = {
      origin: '*',
      credentials: true
 }
@@ -38,7 +38,7 @@ const cors = {
 // los cors se pueden colocar como  '*'
 
 const server = new ApolloServer({
-     cors,
+     corsOptions,
      typeDefs,
      resolvers,
      context: async ({ req }) => getCurrentUser(req)
