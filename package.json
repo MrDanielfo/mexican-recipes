@@ -1,0 +1,33 @@
+{
+  "name": "barger-recipes",
+  "version": "1.0.0",
+  "description": "Recipes Apollo React Project",
+  "main": "server.js",
+  "engines": {
+    "node": "v12.13.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Josué Flores",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
