@@ -24,10 +24,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('Connected to Database'))
 .catch((err) => console.log(err))
 
-// if (process.env.NODE_ENV === 'production') {
-
-// }
-
 const PORT = process.env.PORT || 4444;
 
 const corsOptions = {
