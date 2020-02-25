@@ -37,6 +37,7 @@ const server = new ApolloServer({
      corsOptions,
      typeDefs,
      resolvers,
+     playground: true,
      context: async ({ req }) => getCurrentUser(req)
 })
 
